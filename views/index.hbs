@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Digital Parking</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card mb-3" style="width: 33rem;">
+            <img src="https://images.unsplash.com/photo-1495435229349-e86db7bfa013?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2FyIHBhcmtpbmcgbG90fHx8fHx8MTYyOTM3OTAzMQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"
+                class="card-img-top img-fluid" alt="Parking lot image">
+            <div class="card-body">
+                <h1 class="card-title">Hello!</h1>
+                <p class="card-text">
+                <div class="col-md-6 main">
+                    <form action="reciept" method="POST">
+                        <b>Car plate number*</b><br>
+                        <input class="form-control" type="text" class="box" id="number" name="number"
+                            placeholder="Type your car plate number" required />
+                        <br>
+                        <button class="btn btn-outline-success btn-sm">Park </button>
+                    </form>
+
+                    <br>
+                    <form action="delete" method="POST">
+                        <input class="form-control" type="text" id="delete" name="number"
+                            placeholder="Type plate number to remove">
+                        <br>
+                        <button class="btn btn-outline-warning btn-sm">remove from park</button>
+                    </form>
+                    <br><br>
+                    <div class="text-center">New here?? Don't worry we got you <br><b><a href="register.hbs"
+                                style="text-decoration:none" style="color: skyblue">Register Now</a></b> </div>
+                    <br>
+                    <br>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Destroy Parking Lot
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Destroy parking lot??</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <strong>By destroying parking lot all the information about cars and 
+                                    parking lot history will be deleted.<br>
+                                    you want that?
+                                    </strong>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <form action="exit" method="POST">
+                                        <button class="btn btn-danger">Confirm</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="../app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
